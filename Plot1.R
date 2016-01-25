@@ -11,7 +11,11 @@ a1 <- function() {
   
   DayUnion <- rbind(Day1, Day2)
   
+  dev.copy(png,'Plot1.png')
+  
   hist(DayUnion$Global_active_power[ !DayUnion$Global_active_power=='?'], 
        col = "red", main="Global Active Power", xlab="Global Active Power (kilowatts)")
+  
+  dev.off()
   
 }
